@@ -50,9 +50,21 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
 		UJsonStruct* GetArrayValue(int32 Index);
 	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
-		void AddArrayValue(UJsonStruct* Value);
+		void AddArrayValueStruct(UJsonStruct* Value);
+	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
+		void AddArrayValueBool(bool Value);
+	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
+		void AddArrayValueNumber(float Value);
+	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
+		void AddArrayValueString(FString Value);
 	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
 		UJsonStruct* GetObjectValue(FString ObjectKey);
 	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
-		void SetObjectValue(FString ObjectKey, UJsonStruct* Value);
+		void SetObjectValueStruct(UJsonStruct* Value);
+	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
+		void SetObjectValueBool(FString Jsonkey, bool Value);
+	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
+		void SetObjectValueNumber(FString Jsonkey, float Value);
+	UFUNCTION(BlueprintCallable, Category = "JsonStruct")
+		void SetObjectValueString(FString Jsonkey, FString Value);
 };
