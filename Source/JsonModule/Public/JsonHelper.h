@@ -52,7 +52,7 @@ class JSONMODULE_API UJsonHelper : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, Category = "Json")
 		static void AddJsonArrayValue(UJsonStruct* json, UJsonStruct* value, bool& isSuccess);
 	/*增加Object一个元素*/
-	UFUNCTION(BlueprintPure, Category = "Json")
+	UFUNCTION(BlueprintCallable, Category = "Json")
 		static void AddJsonObjectValue(UJsonStruct* json, UJsonStruct* value, bool& isSuccess,bool isRepleace = true);
 
 	/*生成基础类型*/
